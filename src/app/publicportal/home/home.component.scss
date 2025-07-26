@@ -1,0 +1,136 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .logo {
+    background: #0d47a1;
+    color: white;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 36px;
+    font-size: 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  /* Hero Section */
+  .hero {
+    padding: 40px;
+    background-color: #f8f9fd;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .hero-text p {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+  
+  .hero-buttons .btn {
+    margin-right: 10px;
+  }
+  
+  .hero-image {
+    flex: 1;
+    text-align: right;
+    min-width: 300px;
+    margin-top: 20px;
+  }
+  
+  .hero-image img {
+    width: 320px;
+    max-width: 100%;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .primary {
+    background-color: #0d47a1;
+    color: #fff;
+    border: none;
+  }
+  
+  .secondary {
+    background: transparent;
+    color: #0d47a1;
+    border: 2px solid #0d47a1;
+  }
+  
+  .btn.full {
+    width: 100%;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .section.light {
+    background-color: #f0f2f5;
+  }
+  
+  .how-it-works {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 300px;
+  }
+  
+  .card h3 {
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  

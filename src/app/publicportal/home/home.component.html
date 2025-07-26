@@ -1,0 +1,54 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">A</div>
+  <ul class="nav-links">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/register">Register</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Welcome to<br>Our Platform</h1>
+      <p>Promote your product or get paid to promote!</p>
+      <div class="hero-buttons">
+        <button class="btn primary" (click)="goToRegister()">Register</button>
+        <button class="btn secondary" (click)="goToLogin()">Login</button>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/promoterrmbg.png" alt="Promotion" />
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="section">
+  <h2>How It Works</h2>
+  <div class="how-it-works">
+    <div class="card">
+      <h3>📢 Advertisers</h3>
+      <p>
+        Advertisers can add tasks to promote their products. Track progress and
+        approve completed work with ease.
+      </p>
+    </div>
+    <div class="card">
+      <h3>📣 Promoters</h3>
+      <p>
+        Promoters can browse and accept tasks. Submit work, get approvals, and
+        earn payouts.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section light">
+  <h2>Pricing</h2>
+  <p>Sign-up fees, platform usage model!</p>
+</section>

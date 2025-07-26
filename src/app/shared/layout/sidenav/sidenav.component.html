@@ -1,0 +1,26 @@
+ 
+  
+  <div class="sidenav-inner">
+    <div class="mat-sidenav-header">
+      <!-- <img src="assets/images/avatar-5.png" alt="Logo" class="logo" /> -->
+      <div class="header-text" *ngIf="layoutService.isCollapsed">
+        <h2>Rehan</h2>
+        <p>Khan</p>
+      </div>
+    </div>
+  
+    <mat-nav-list>
+  <a
+    mat-list-item
+    *ngFor="let item of menus"
+    [routerLink]="item.route"
+    [matTooltip]="item.label"
+    [matTooltipDisabled]="!layoutService.isCollapsed"
+  >
+    <mat-icon>{{ item.icon }}</mat-icon>
+    <span *ngIf="layoutService.isCollapsed">{{ item.label }}</span>
+  </a>
+</mat-nav-list>
+
+  </div>  
+    

@@ -1,0 +1,18 @@
+.layout-container {
+  height: 100vh;
+}
+
+.sidenav {
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  //background: #00417c;
+ // color: white;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+.content-body {
+  padding: 16px;
+}

@@ -1,0 +1,21 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav
+    #drawer
+    mode="side"
+    [opened]="true"
+    [style.width.px]="layoutService.sidenavWidth()"
+    class="sidenav"
+  >
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content
+    class="main-content"
+    [style.margin-left.px]="layoutService.sidenavWidth()"
+  >
+    <app-header></app-header>
+    <div class="content-body">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

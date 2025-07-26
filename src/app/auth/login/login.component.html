@@ -1,0 +1,66 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form #loginForm="ngForm" (ngSubmit)="login()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            name="username"
+            [(ngModel)]="username"
+            required
+            #usernameCtrl="ngModel"
+            placeholder="Enter your username"
+          />
+          <mat-error *ngIf="usernameCtrl.invalid && usernameCtrl.touched">
+            Username is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            required
+            #passwordCtrl="ngModel"
+            placeholder="Enter your password"
+          />
+          <mat-error *ngIf="passwordCtrl.invalid && passwordCtrl.touched">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          class="full-width login-btn"
+          type="submit"
+          [disabled]="loginForm.invalid"
+        >
+          Log In
+        </button>
+
+        <button
+          mat-button
+          color="accent"
+          type="button"
+          class="back-button"
+          (click)="goToHome()"
+        >
+          ← Back to Home
+        </button>
+
+        <div *ngIf="error" style="color: red; margin-top: 1rem;">
+          {{ error }}
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
