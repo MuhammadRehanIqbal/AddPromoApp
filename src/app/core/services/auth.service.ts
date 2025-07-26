@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, switchMap, tap } from 'rxjs';
 import { MenuService } from './menu.service';
+import { environment } from '../../../environments/environment'; // Import environment variables
+
+
+const apiUrl = environment.apiUrl;
 
 export interface LoginResponse {
   token: string;
@@ -12,7 +16,9 @@ export interface LoginResponse {
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private readonly LOGIN_URL = 'https://localhost:7153/auth/GenerateToken';
+   
+  private readonly LOGIN_URL = apiUrl;
+  //'https://localhost:7153/auth/GenerateToken';
   private readonly TOKEN_KEY = 'token';
   private readonly ROLE_KEY = 'role';
 
