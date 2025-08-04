@@ -18,9 +18,6 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: PromoterdashboardComponent }, 
-      { path: 'tasks', component: TasksListComponent },
-      { path: 'tasks/create', component: TaskFormComponent },
-      { path: 'tasks/edit/:id', component: TaskFormComponent },
       // { path: 'user', component: AdminUserComponent },
       // { path: 'product', component: AdminProductComponent },
       // { path: 'order', component: AdminOrderComponent }
