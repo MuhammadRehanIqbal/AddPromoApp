@@ -4,10 +4,8 @@ import { AuthGuard } from '../core/auth.guard';
 import { RoleGuard } from '../core/role.guard';
 
 // Import your components 
-import { PromoterdashboardComponent } from './promoterdashboard/promoterdashboard.component'; 
-import { TasksListComponent } from './tasks/tasks-list/tasks-list.component';
-import { LayoutComponent } from '../shared/layout/layout/layout.component';
-import { TaskFormComponent } from './tasks/task-form/task-form.component';
+import { PromoterdashboardComponent } from './promoterdashboard/promoterdashboard.component';  
+import { LayoutComponent } from '../shared/layout/layout/layout.component'; 
 
 const routes: Routes = [
   {
