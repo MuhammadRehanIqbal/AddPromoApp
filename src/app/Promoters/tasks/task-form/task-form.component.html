@@ -1,0 +1,11 @@
+<h3></h3>
+<form (ngSubmit)="onSubmit()" #taskForm="ngForm">
+  <label>Title:</label>
+  <input type="text" name="title" [(ngModel)]="task.title" required />
+
+  <label>Status:</label>
+  <input type="text" name="status" [(ngModel)]="task.status" required />
+
+  <button type="submit">Save</button>
+  <button type="button" (click)="onCancel()">Cancel</button>
+</form>

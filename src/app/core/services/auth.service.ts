@@ -31,7 +31,7 @@ export class AuthService {
   ) {}
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post<LoginResponse>(this.LOGIN_URL, { username, password }).pipe(
+    return this.http.post<LoginResponse>(this.LOGIN_URL +'/auth/GenerateToken', { username, password }).pipe(
       tap(({ token, role }) => {
         localStorage.setItem(this.TOKEN_KEY, token);
         localStorage.setItem(this.ROLE_KEY, role);

@@ -1,20 +1,17 @@
-import { NgModule } from "@angular/core"; 
-import { CommonModule } from "@angular/common"; 
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { PromotersRoutingModule } from "./promoters-routing.module";
 import { SharedModule } from "../shared/shared.module";
-import { PromoterdashboardComponent } from "./promoterdashboard/promoterdashboard.component";
+import { PromoterdashboardComponent } from "./promoterdashboard/promoterdashboard.component"; 
+import { LayoutComponent } from "../shared/layout/layout/layout.component";
 
 @NgModule({
-    declarations: [
-      PromoterdashboardComponent,
-    //   AdminUserComponent,
-    //   AdminProductComponent,
-    //   AdminOrderComponent
-    ],
-    imports: [
-      CommonModule,
-      PromotersModule,
-      SharedModule
-    ]
-  })
-  export class PromotersModule { }
-  
+  imports: [
+    LayoutComponent,
+    CommonModule,
+    PromotersRoutingModule,
+    SharedModule,
+    PromoterdashboardComponent
+  ]
+})
+export class PromotersModule {}

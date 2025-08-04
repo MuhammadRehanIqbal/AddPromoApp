@@ -5,6 +5,7 @@ import { RoleGuard } from '../core/role.guard';
 
 // Import your components
  import { AdminDashboardComponent } from '../admin/dashboard/dashboard.component';
+import { LayoutComponent } from '../shared/layout/layout/layout.component';
 // import { AdminUserComponent } from './user/admin-user.component';
 // import { AdminProductComponent } from './product/admin-product.component';
 // import { AdminOrderComponent } from './order/admin-order.component';
@@ -12,6 +13,7 @@ import { RoleGuard } from '../core/role.guard';
 const routes: Routes = [
   {
     path: '',
+    component: LayoutComponent,
     canActivate: [AuthGuard, RoleGuard],
     data: { role: 'admin' },
     children: [

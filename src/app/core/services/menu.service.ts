@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 export interface MenuItem {
   label: string;
@@ -17,7 +18,8 @@ export class MenuService {
   private menusSubject = new BehaviorSubject<MenuItem[]>(this.getMenusFromStorage());
   menus$ = this.menusSubject.asObservable();
 
-  private readonly MENU_URL = 'https://localhost:7153/users/get_menu_by_user';
+  private readonly MENU_URL = environment.apiUrl;
+  //'https://localhost:7153/users/get_menu_by_user';
 
   constructor(private http: HttpClient) {}
 
@@ -31,7 +33,7 @@ export class MenuService {
   }
 
   loadMenusByRole(): Observable<MenuItem[]> {
-    return this.http.get<MenuItem[]>(`${this.MENU_URL}`).pipe(
+    return this.http.get<MenuItem[]>(`${this.MENU_URL +'/users/get_menu_by_user'}`).pipe(
       tap(menus => {
         this.menusSubject.next(menus);
         this.saveMenusToStorage(menus);
